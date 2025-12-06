@@ -1,0 +1,89 @@
+// 定义分割线的颜色
+$divider-color: #e8e8e8;
+$divider-text-color: #666;
+$divider-font-size: 14px;
+$divider-margin: 16px;
+$divider-text-padding: 12px;
+
+.divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid $divider-color;
+    margin: $divider-margin 0;
+    position: relative;
+
+    // 垂直分割线
+    &-vertical {
+        width: 1px;
+        height: 1em;
+        margin: 0 $divider-margin;
+        border-top: none;
+        border-left: 1px solid $divider-color;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    // 虚线样式
+    &-dashed {
+        border-top-style: dashed;
+        
+        &.divider-vertical {
+            border-left-style: dashed;
+        }
+    }
+
+    // 带文字的分割线
+    &-with-text {
+        display: flex;
+        align-items: center;
+        border: none;
+        margin: $divider-margin 0;
+        font-size: $divider-font-size;
+        color: $divider-text-color;
+
+        .divider-text {
+            padding: 0 $divider-text-padding;
+            white-space: nowrap;
+        }
+
+        .divider-line {
+            flex: 1;
+            border-top: 1px solid $divider-color;
+            
+            &.divider-dashed {
+                border-top-style: dashed;
+            }
+        }
+
+        // 文字位置在左侧
+        &-left {
+            .divider-line:first-child {
+                width: 8px;
+                flex: none;
+            }
+            
+            .divider-line:last-child {
+                flex: 1;
+            }
+        }
+
+        // 文字位置在右侧
+        &-right {
+            .divider-line:first-child {
+                flex: 1;
+            }
+            
+            .divider-line:last-child {
+                width: 8px;
+                flex: none;
+            }
+        }
+
+        // 文字位置在中间（默认）
+        &-center {
+            .divider-line {
+                flex: 1;
+            }
+        }
+    }
+}

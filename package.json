@@ -1,10 +1,11 @@
 {
-  "name": "BERComponent",
+  "name": "B-Design",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "createCom": "node script/createComponent.js",
+    "createCom": "node bin/createComponent.js",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --coverage",
