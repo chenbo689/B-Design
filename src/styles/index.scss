@@ -1,0 +1,111 @@
+// === 主题色变量定义 ===
+:root {
+  /* 基础色系 */
+  --color-primary: #1890ff;        /* 主色 - 蓝色，代表行动与信任 */
+  --color-primary-hover: #40a9ff;  /* 主色悬停 */
+  --color-primary-active: #096dd9; /* 主色点击 */
+  --color-primary-10: #e6f7ff;     /* 主色极浅背景 */
+  --color-primary-50: #bae7ff;     /* 主色浅色 */
+  --color-primary-100: #91d5ff;    /* 主色中浅 */
+  --color-primary-200: #69c0ff;    /* 主色中等 */
+  --color-primary-300: #40a9ff;    /* 主色中深 */
+  --color-primary-400: #1890ff;    /* 主色标准 */
+  --color-primary-500: #096dd9;    /* 主色加深 */
+  --color-primary-600: #0050b3;    /* 主色更深 */
+
+  --color-success: #52c41a;        /* 成功 - 绿色 */
+  --color-success-hover: #73d13d;
+  --color-success-active: #389e0d;
+  --color-success-10: #f6ffed;
+  --color-success-50: #d9f7be;
+
+  --color-warning: #faad14;        /* 警告 - 橙色 */
+  --color-warning-hover: #fbbf4d;
+  --color-warning-active: #d48806;
+  --color-warning-10: #fffbe6;
+  --color-warning-50: #fff1b0;
+
+  --color-error: #ff4d4f;          /* 错误 - 红色 */
+  --color-error-hover: #ff7875;
+  --color-error-active: #d9363e;
+  --color-error-10: #fff2f0;
+  --color-error-50: #ffccc7;
+
+  --color-info: #13c2c2;           /* 信息 - 青色 */
+  --color-info-hover: #40d5d5;
+  --color-info-active: #0aa9a9;
+  --color-info-10: #e6fffb;
+  --color-info-50: #b5f5f0;
+
+  /* 中性色系（灰度） */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-gray-1: #fafafa;         /* 最浅背景 */
+  --color-gray-2: #f5f5f5;         /* 面板/卡片背景 */
+  --color-gray-3: #eeeeee;         /* 分割线、边框 */
+  --color-gray-4: #d9d9d9;         /* 边框 / 禁用状态 */
+  --color-gray-5: #bfbfbf;         /* 次要文字 */
+  --color-gray-6: #8c8c8c;         /* 辅助文字 */
+  --color-gray-7: #595959;         /* 正文文字 */
+  --color-gray-8: #262626;         /* 标题文字 */
+  --color-gray-9: #141414;         /* 深色文字（高对比） */
+  --color-gray-10: #000000;        /* 纯黑（极少使用） */
+
+  /* 文字颜色语义化 */
+  --color-text-primary: var(--color-gray-9);   /* 主要文字 */
+  --color-text-secondary: var(--color-gray-7); /* 次要文字 */
+  --color-text-tertiary: var(--color-gray-6);  /* 辅助/提示文字 */
+  --color-text-disabled: var(--color-gray-5);  /* 禁用文字 */
+
+  /* 背景色语义化 */
+  --color-bg-base: var(--color-white);         /* 页面/容器基础背景 */
+  --color-bg-surface: var(--color-gray-1);     /* 卡片/面板背景 */
+  --color-bg-overlay: rgba(0, 0, 0, 0.45);     /* 模态层遮罩 */
+  --color-bg-hover: var(--color-gray-2);       /* 悬停背景 */
+  --color-bg-disabled: var(--color-gray-1);    /* 禁用状态背景 */
+
+  /* 边框色 */
+  --color-border-base: var(--color-gray-3);    /* 常规边框 */
+  --color-border-hover: var(--color-gray-4);   /* 悬停边框 */
+  --color-border-disabled: var(--color-gray-4); /* 禁用边框 */
+
+  /* 阴影（可选） */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px 0 rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 12px 32px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* === 可选：暗黑模式主题 === */
+[data-theme="dark"] {
+  --color-bg-base: #121212;
+  --color-bg-surface: #1e1e1e;
+  --color-gray-1: #1e1e1e;
+  --color-gray-2: #252525;
+  --color-gray-3: #333333;
+  --color-gray-4: #4a4a4a;
+  --color-gray-5: #666666;
+  --color-gray-6: #888888;
+  --color-gray-7: #b3b3b3;
+  --color-gray-8: #e0e0e0;
+  --color-gray-9: #f5f5f5;
+  --color-text-primary: var(--color-gray-9);
+  --color-text-secondary: var(--color-gray-7);
+  --color-text-tertiary: var(--color-gray-6);
+  --color-text-disabled: var(--color-gray-5);
+
+  --color-primary: #40a9ff;
+  --color-primary-10: #0a2c40;
+  --color-primary-50: #1a3f52;
+  --color-primary-100: #2a5264;
+  --color-primary-200: #3a6576;
+  --color-primary-300: #4a7888;
+  --color-primary-400: #5a8b9a;
+  --color-primary-500: #6a9eac;
+  --color-primary-600: #7abfbd;
+
+  --color-border-base: var(--color-gray-3);
+  --color-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --color-shadow-md: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+}
